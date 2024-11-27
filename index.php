@@ -53,37 +53,35 @@ else {
 ?>
 <html>
 	<head>
-		<title>PHP-kuiz</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Kuiz-Mania</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 
 	<body>
-		<header>
-			<div class="container">
-				<h1>PHP-kuiz</h1>
-				<a href="index.php" class="start">Home</a>
-				<a href="admin.php" class="start">Admin Panel</a>
+	<header>
+        <div class="header-container">
+            <nav class="left-nav">
+                <a href="index.php" class="nav-button">Home</a>
+                <a href="admin.php" class="nav-button">Admin Panel</a>
+                <a href="blog.html" class="nav-button">Blog</a>
+            </nav>
+            <h1 class="kuiz-mania">Kuiz-Mania</h1>
+        </div>
+    </header>
 
-			</div>
-		</header>
+	<main>
+        <div class="form-container">
+            <h2>Enter Your Email</h2>
+            <form method="POST" action="">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="submit" name="submit" value="PLAY NOW" class="play-button">
+            </form>
+        </div>
+    </main>
 
-		<main>
-		<div class="container">
-				<h2>Enter Your Email</h2>
-				<form method="POST" action="">
-				<input type="email" name="email" required="" >
-				<input type="submit" name="submit" value="PLAY NOW">
-
-			</div>
-
-
-		</main>
-
-		<footer>
-			<div class="container">
-				Copyright @ PHP-kuiz
-			</div>
-		</footer>
+    <footer>
+        <p>&copy; 2024 Kuiz-Mania | All Rights Reserved</p>
+    </footer>
 
 	</body>
 </html>

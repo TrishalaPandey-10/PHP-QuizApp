@@ -7,7 +7,7 @@ if (isset($_SESSION['admin'])) {
 }
 if (isset($_POST['password']))  {
 	$password = mysqli_real_escape_string($conn , $_POST['password']);
-	$adminpass = '$2y$10$l/R3o6kAUvYR5lbikmxq2OosyUtvTqzmQH7XrYzeuLxd8OtzZIUYm';
+	$adminpass = '$2y$10$FSQqSTutJbHuIJR9gFXCCudTAVeqtvQMJ38bDd7hUe.vpQUkhYyKq';
 	if (password_verify($password , $adminpass)) {
 		$_SESSION['admin'] = "active";
 		header("Location: adminhome.php");
@@ -24,36 +24,31 @@ if (isset($_POST['password']))  {
 
 <html>
 	<head>
-		<title>PHP-kuiz</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Kuiz-Mania</title>
+		<link rel="stylesheet" type="text/css" href="css/admin.css">
 	</head>
 
 	<body>
-		<header>
-			<div class="container">
-				<h1>PHP-kuiz</h1>
-				<a href="index.php" class="start">Home</a>
+	<header>
+        <div class="header-container">
+            <a href="index.php" class="nav-button">Home</a>
+            <h1 class="admin-title">Admin Panel - Kuiz-Mania</h1>
+        </div>
+    </header>
 
-			</div>
-		</header>
+    <main>
+        <div class="form-container">
+            <h2>Enter Admin Password</h2>
+            <form method="POST" action="">
+            <input type="password" name="password"  required="">
+                <input type="submit" name="submit" value="send" class="login-button">
+            
+        </div>
+    </main>
 
-		<main>
-		<div class="container">
-				<h2>Enter Password</h2>
-				<form method="POST" action="">
-				<input type="password" name="password" required="" >
-				<input type="submit" name="submit" value="send"> 
-
-			</div>
-
-
-		</main>
-
-		<footer>
-			<div class="container">
-				Copyright @ PHP-kuiz
-			</div>
-		</footer>
+    <footer>
+        <p>&copy; 2024 PHP-kuiz | All Rights Reserved</p>
+    </footer>
 
 	</body>
 </html>

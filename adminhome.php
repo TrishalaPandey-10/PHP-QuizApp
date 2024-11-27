@@ -17,7 +17,7 @@ if (isset($_SESSION['admin'])) {
 	<body>
 		<header>
 			<div class="container">
-				<h1>PHP-kuizi</h1>
+				<h1>PHP-kuiz</h1>
 				<a href="index.php" class="start">Home</a>
 				<a href="add.php" class="start">Add Question</a>
 				<a href="allquestions.php" class="start">All Questions</a>

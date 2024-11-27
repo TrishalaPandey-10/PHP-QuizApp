@@ -54,36 +54,40 @@ $totalqn = mysqli_num_rows($run);
 <html>
 	<head>
 		<title>PHP-kuiz</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/question.css">
 	</head>
 
 	<body>
-		<header>
-			<div class="container">
-				<h1>PHP-Kuiz</h1>
-			</div>
-		</header>
+	<header>
+        <div class="container">
+            <h1 class="quiz-title">PHP-Kuiz</h1>
+        </div>
+    </header>
 
-		<main>
-			<div class= "container">
-				<div class= "current">Question <?php echo $qno; ?> of <?php echo $totalqn; ?></div>
-				<p class="question"><?php echo $question; ?></p>
-				<form method="post" action="process.php">
-					<ul class="choices">
-					   <li><input name="choice" type="radio" value="a" required=""><?php echo $ans1; ?></li>
-					   <li><input name="choice" type="radio" value="b" required=""><?php echo $ans2; ?></li>
-					   <li><input name="choice" type="radio" value="c" required=""><?php echo $ans3; ?></li>
-					   <li><input name="choice" type="radio" value="d" required=""><?php echo $ans4; ?></li>
-					 
-					</ul>
-					<input type="submit" value="Submit"> 
-					<input type="hidden" name="number" value="<?php echo $qno;?>">
-					<br>
-					<br>
-					<a href="results.php" class="start">Stop Kqiz</a>
-				</form>
-			</div>
-		</main>
+    <main>
+        <div class="quiz-container">
+            <div class="current">
+                <p>Question <?php echo $qno; ?> of <?php echo $totalqn; ?></p>
+            </div>
+            <div class="question-box">
+                <p class="question-text"><?php echo $question; ?></p>
+            </div>
+            <form method="post" action="process.php" class="quiz-form">
+                <ul class="choices">
+                    <li><label><input name="choice" type="radio" value="a" required> <?php echo $ans1; ?></label></li>
+                    <li><label><input name="choice" type="radio" value="b" required> <?php echo $ans2; ?></label></li>
+                    <li><label><input name="choice" type="radio" value="c" required> <?php echo $ans3; ?></label></li>
+                    <li><label><input name="choice" type="radio" value="d" required> <?php echo $ans4; ?></label></li>
+                </ul>
+                <input type="submit" value="Submit" class="submit-button">
+                <input type="hidden" name="number" value="<?php echo $qno; ?>">
+                <br><br>
+                <a href="results.php" class="stop-button">Stop Quiz</a>
+            </form>
+        </div>
+    </main>
+
+    
 </body>
 </html>
 

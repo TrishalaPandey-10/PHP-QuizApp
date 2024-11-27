@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn PHP - Your Guide to Mastering PHP</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* General Reset */
+    body, h1, h2, h3, p, a {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    nav {
+      /* background-color: #444; */
+      padding: 0.5rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li {
+      margin-left: 5px;
+      border: 2px solid black;
+      padding: 5px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .intro h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .content .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      flex: 1 1 calc(33.333% - 2rem);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    .content .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .content .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .content .card h3 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      color: #333;
+    }
+
+    .content .card p {
+      color: #777;
+      font-size: 1rem;
+    }
+
+    .content .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #333;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .content .card a:hover {
+      background-color: #ffcc00;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learn PHP</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <!-- <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <h2>Welcome to Your PHP Learning Journey</h2>
+      <p>Master PHP with our comprehensive tutorials, examples, and exercises. Whether you're a beginner or an advanced developer, we have something for you.</p>
+    </div>
+
+    <div class="content">
+      <div class="card" style="animation: slideUp 1s ease-out;">
+        <img src="https://storage.googleapis.com/a1aa/image/IeAo9oqhfdgmgUmDNOsUH3HKCRPMdlX3TfWunKeFnhHvt0UPB.jpg" alt="Introduction to PHP">
+        <h3>Introduction to PHP</h3>
+        <p>Get started with PHP by learning the basics. Understand the syntax, variables, and basic functions.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="card" style="animation: slideUp 1s ease-out 0.3s;">
+        <img src="https://storage.googleapis.com/a1aa/image/MXp38e5bfXojrkFZkE6ZPUvnW6ZjQNrKhw7C3xFNJCqgLN1TA.jpg" alt="PHP Variables and Data Types">
+        <h3>PHP Variables and Data Types</h3>
+        <p>Learn about different data types in PHP and how to use variables effectively in your code.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="card" style="animation: slideUp 1s ease-out 0.6s;">
+        <img src="https://storage.googleapis.com/a1aa/image/BeksDz6QJP09MqwLGI9llQ3b3rFbQdDNGmPevT74FVJlLN1TA.jpg" alt="PHP Control Structures">
+        <h3>Control Structures</h3>
+        <p>Master control structures such as if-else statements, loops, and switch cases to control the flow of your PHP programs.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="card" style="animation: slideUp 1s ease-out 0.9s;">
+        <img src="https://storage.googleapis.com/a1aa/image/TtKrwfUuHJ2iM6rQVeuHXVC1oewIUYgFoxrFag1wmcT7WaqnA.jpg" alt="PHP Functions">
+        <h3>Functions in PHP</h3>
+        <p>Understand how to create and use functions in PHP to write reusable and modular code.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="card" style="animation: slideUp 1s ease-out 1.2s;">
+        <img src="https://storage.googleapis.com/a1aa/image/patR0p4bDIpcFpRNuSTixftsqArfJUmQvbFrB7KMqYeIXaqnA.jpg" alt="PHP and Databases">
+        <h3>Working with Databases</h3>
+        <p>Learn how to connect PHP with MySQL databases to store and retrieve data efficiently.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="card" style="animation: slideUp 1s ease-out 1.5s;">
+        <img src="https://storage.googleapis.com/a1aa/image/Ahh9PR5uJ6oZENNLXFe8ycvSIahcKdVEiRM9LYAenyoiLN1TA.jpg" alt="PHP Security">
+        <h3>PHP Security</h3>
+        <p>Discover best practices for securing your PHP applications against common vulnerabilities and attacks.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 Learn PHP. All rights reserved.</p>
+  </footer>
+</body>
+</html>

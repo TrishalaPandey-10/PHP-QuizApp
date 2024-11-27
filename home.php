@@ -9,41 +9,44 @@ $total = mysqli_num_rows($run);
 
 <html>
 	<head>
-		<title>PHP-kuiz</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Kuiz-Mania</title>
+		<link rel="stylesheet" type="text/css" href="css/home.css">
 	</head>
 
 	<body>
-		<header>
-			<div class="container">
-				<h1>PHP-Kuiz</h1>
-			</div>
-		</header>
+	<header>
+        <div class="container">
+            <h1 class="title">Kuiz-Mania</h1>
+        </div>
+    </header>
 
-		<main>
-			<div class="container">
-				<h2>Welcome to PHP Kuiz !</h2>
-				<p>This is just a simple quiz game to test your knowledge!</p>
-				<ul>
-				    <li><strong>Number of questions: </strong><?php echo $total; ?></li>
-				    <li><strong>Type: </strong>Multiple Choice</li>
-				    <li><strong>Estimated time for each question: </strong><?php echo $total * 0.05 * 60; ?> seconds</li>
-				     <li><strong>Score: </strong>   &nbsp; +1 point for each correct answer</li>
-				</ul>
-				<a href="question.php?n=1" class="start">Start Kuiz</a>
-				<a href="exit.php" class="add">Exit</a>
+    <main>
+        <div class="container">
+            <h2>Welcome to PHP Kuiz!</h2>
+            <p>This is a simple quiz game to test your knowledge!</p>
+            <ul>
+                <li><strong>Number of questions: </strong><?php echo $total; ?></li>
+                <li><strong>Type: </strong>Multiple Choice</li>
+                <li><strong>Estimated time for each question: </strong><?php echo $total * 0.05 * 60; ?> seconds</li>
+                <li><strong>Score: </strong>+1 point for each correct answer</li>
+            </ul>
+            <div class="button-container">
+                <a href="question.php?n=1" class="button start">Start Kuiz</a>
+                <a href="exit.php" class="button exit">Exit</a>
+            </div>
+        </div>
+    </main>
 
-			</div>
-		</main>
-
-		<footer>
-			<div class="container">
-				Copyright @ PHP_kuiz
-			</div>
-		</footer>
+    <footer>
+        <div class="container">
+            &copy; 2024 Kuiz-Mania | All Rights Reserved
+        </div>
+    </footer>
 
 	</body>
 </html>
+
+
 <?php unset($_SESSION['score']); ?>
 <?php }
 else {
