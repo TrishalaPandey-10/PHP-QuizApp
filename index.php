@@ -63,7 +63,8 @@ else {
             <nav class="left-nav">
                 <a href="index.php" class="nav-button">Home</a>
                 <a href="admin.php" class="nav-button">Admin Panel</a>
-                <a href="blog.html" class="nav-button">Blog</a>
+                <a href="blog.html" class="nav-button">Learn</a>
+                <a href="/" class="nav-button">Notes</a>
             </nav>
             <h1 class="kuiz-mania">Kuiz-Mania</h1>
         </div>
