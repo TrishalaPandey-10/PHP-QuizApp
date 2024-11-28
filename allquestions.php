@@ -6,7 +6,7 @@ if (isset($_SESSION['admin'])) {
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PHP-Kuiz</title>
+		<title>Kuiz-Mania</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/style1.css">
 	</head>
@@ -14,7 +14,7 @@ if (isset($_SESSION['admin'])) {
 	<body>
 		<header>
 			<div class="container">
-				<h1>PHP-Kuiz</h1>
+				<h1>Kuiz-Mania</h1>
 				<a href="index.php" class="start">Home</a>
 				<a href="add.php" class="start">Add Question</a>
 				<a href="allquestions.php" class="start">All Questions</a>
