@@ -50,6 +50,14 @@ INSERT INTO `questions` (`qid`, `qno`, `question`, `ans1`, `ans2`, `ans3`, `ans4
 (10, 6, 'When using the POST method, variables are displayed in the URL:', 'True', 'False', 'Can not say', 'none of these', 'b'),
 (11, 7, ' Which of the following function is used to get the size of a file?', 'fopen()', 'fread()', 'fsize()', 'filesize()', 'd'),
 (12, 8, 'Which of the following is used to delete a cookie?', 'setcookie()', '$_COOKIE variable', 'isset() function', 'none of the above', 'a');
+(13, 9, 'Which of the following is a superglobal array in PHP?', '$_GLOBALS', '$_FILES', '$_REQUEST', 'All of the above', 'd'),
+(14, 10, 'How can you open a file for reading in PHP?', 'fopen($filename, "r");', 'file_open($filename);', 'file($filename);', 'readfile($filename);', 'a'),
+(15, 11, 'What is the correct way to create a function in PHP?', 'function myFunction()', 'create myFunction()', 'def myFunction()', 'fn myFunction()', 'a'),
+(16, 12, 'Which of the following variable types are supported by PHP?', 'Integer', 'String', 'Array', 'All of the above', 'd'),
+(17, 13, 'How do you terminate a PHP statement?', 'Period (.)', 'Comma (,)', 'Semicolon (;)', 'Colon (:)', 'c'),
+(18, 14, 'What is the correct way to include another PHP file?', 'include "file.php";', 'import "file.php";', 'require "file.php";', 'Both include and require', 'd'),
+(19, 15, 'Which function is used to start a session in PHP?', 'start_session()', 'session_start()', 'session_begin()', 'session_open()', 'b'),
+(20, 16, 'How can you get the length of a string in PHP?', 'length($string)', 'strlen($string)', 'strlength($string)', 'len($string)', 'b');
 
 -- --------------------------------------------------------
 
